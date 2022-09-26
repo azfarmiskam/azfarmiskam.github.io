@@ -21,7 +21,7 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "example@example.com";
+        $recipient = "mohdazfar2401@gmail.com";
 
         // Set the email subject.
         $subject = "New contact from $name";
@@ -37,15 +37,15 @@
 
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
-        
+
             $json['status'] = 200;
             $json['message'] = "Thank You! Your message has been sent.";
-        
+
         } else {
-        
+
             $json['status'] = 500;
             $json['message'] = "Oops! Something went wrong and we couldn't send your message.";
-        
+
         }
 
     } else {
@@ -58,4 +58,3 @@
 echo json_encode($json);
 
 ?>
-
